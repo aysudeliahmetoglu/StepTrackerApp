@@ -1,20 +1,36 @@
-# Expo Router Example
+# StepTrackerApp
 
-Use [`expo-router`](https://docs.expo.dev/router/introduction/) to build native navigation using files in the `app/` directory.
+Adım sayar ve kalori hesaplayıcı özelliklerine sahip bir mobil uygulama. Kullanıcının attığı adımları, yakılan kaloriyi takip eder ve profil bilgilerini yönetmesine imkân tanır. Expo Router ile modern bir navigasyon sistemi kullanılmıştır.
 
-## 🚀 How to use
+## ✨ Özellikler
 
-```sh
-npx create-expo-app -e with-router
-```
+- 👣 Günlük adım sayısı takibi
+- 🔥 Yakılan kalorinin hesaplanması
+- 📈 İstatistiksel grafik gösterimleri
+- 🧑 Profil oluşturma ve düzenleme
+- 🔐 Kullanıcı girişi ve kaydı
+- ⚛️ React Native + Expo Router mimarisi
 
-## Deploy
+## 📂 Proje Yapısı
 
-Deploy on all platforms with Expo Application Services (EAS).
+```bash
+app/
+│
+├── _layout.tsx              # Uygulama ana düzeni (Slot)
+├── index.tsx                # Giriş yönlendirme veya welcome
+├── login.tsx                # Kullanıcı girişi
+├── register.tsx             # Yeni kullanıcı kaydı
+│
+├── (tabs)/                  # Sekmeli (tab) gezinti
+│   ├── _layout.tsx          # Tabs düzeni
+│   ├── home.tsx             # Adım sayar ekranı
+│   ├── stats.tsx            # İstatistik ekranı
+│   ├── profile.tsx          # Kullanıcı profili
+│   ├── calories.tsx         # Kalori hesaplayıcı
+│
+├── components/
+│   └── StepCounter.tsx      # Adım sayacı bileşeni
+│
+├── utils/
+│   └── calculateCalories.ts # Kalori hesaplama yardımcı fonksiyonu
 
-- Deploy the website: `npx eas-cli deploy` — [Learn more](https://docs.expo.dev/eas/hosting/get-started/)
-- Deploy on iOS and Android using: `npx eas-cli build` — [Learn more](https://expo.dev/eas)
-
-## 📝 Notes
-
-- [Expo Router: Docs](https://docs.expo.dev/router/introduction/)
